@@ -58,7 +58,6 @@ void setup(){
   bricks = loadImage("bricks.jpeg");
   println(300/1000.0);
   stroke(0, 0, 255);
-  //noLoop();
 }
 
 void draw(){
@@ -98,7 +97,6 @@ void draw(){
           rays[i].rotation = (rays[i].rotation - 0.1 + TWO_PI)%TWO_PI;
           rays[i].slope = sin(rays[i].rotation)/cos(rays[i].rotation);
         }
-        //println(sin(look.rotation)/cos(look.rotation));
       break;
         
       case 'e':
@@ -106,7 +104,6 @@ void draw(){
           rays[i].rotation = (rays[i].rotation + 0.1 + TWO_PI)%TWO_PI;
           rays[i].slope = sin(rays[i].rotation)/cos(rays[i].rotation);
         }
-        //println(sin(look.rotation)/cos(look.rotation));
       break;
     }
   }
@@ -127,7 +124,6 @@ void draw(){
           pixels[j*width+i] = color(0, 0, 255/(rays[i].calcDist()/100.0));   
         }
       }
-      //line(i, 500-10000/(rays[i].calcDist()), i, 500+10000/(rays[i].calcDist()));
     }
     rays[i].reset();
   }
