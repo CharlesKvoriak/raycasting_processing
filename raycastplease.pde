@@ -112,7 +112,6 @@ void draw(){
   boolean col2;
   
   loadPixels();
-  bricks.loadPixels();
   for(int i = 0; i<width; i++){
     for(int j = 0; j < walls.length; j++){
       rays[i].collides(walls[j][2][0], walls[j][0], walls[j][1]);
